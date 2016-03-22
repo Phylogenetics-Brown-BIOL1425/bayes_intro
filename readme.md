@@ -91,7 +91,7 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
     rb JukesCantor.Rev
 
-Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
+Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in? It was not a sufficient burn in, because when the burn-in was made to be 0 in Tracer, the trace was not yet stable and there was still some burn in for both run 1 and run 2.
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
@@ -107,6 +107,7 @@ Inspect the parameter traces. Note that the gtr run has many more model paramete
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
+The Marginal Probability Distribution for the two trees were similar in spread but had slightly different peaks, the peak of the tree for run 2 being slightly less negative than that of the tree for run 1. The trees were not the same either—-the same sister relationships were recovered from both runs, but certain organisms were placed at different positions on the tree, resulting in a different overall topology. Examples include the position of *Tarsius syrinchta*, *Daubentonia madagascariensis*, *Samiri sciureus*, and the clade containing *Alouatta palliata* and *Cebus albifrons*. The runs did not converge, as the posterior distribution of the two runs were slightly different.
 
 
 ## Running on empty
@@ -116,6 +117,7 @@ In the above analyses, the priors were set in the script and the data informed t
     rb GTR_GammaEmpty.Rev
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
+The posteriors are much much much smaller/more negative in the analyses where the data informed the posteriors. In the empty analyses, the posteriors are in the range of 0 to -60, whereas in the previous analyses, the posteriors are much more negative, in the range of -15700 to -15750. 
 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
