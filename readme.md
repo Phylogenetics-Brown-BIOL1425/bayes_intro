@@ -128,5 +128,5 @@ Because there is a flat prior on the trees, there is a very large number of bipa
 Copy any one of the three analysis files from above, add it to the git repo, and modify one or more of the priors. For example, in the GRT analyses you could change `alpha_prior <- 0.05`  to `alpha_prior <- 0.10`. Be sure to rename the output files so they don't write over your previous analyses.
 
 How did the change in the prior impact the results (ie, the posterior)? 
-The change in the prior did not have a noticeable effect on the posterior. Previously, the posterior range was between -15700 and -15750, whereas now the range is from -13120 to -13200. 
+The change in the prior did not have a noticeable effect on the posterior. Previously, the posterior range was between -13120 and -13190, whereas now the range is from -13120 to -13200. Comparing all of the posteriors together, with the four marginal probability distribution curves overlaid over each other, 
 
