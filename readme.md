@@ -95,6 +95,7 @@ Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generatio
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+The 2 runs did converge in most parameters. Some branch lengths, however, showed very little overlap.
 
 ## GTR analysis
 
@@ -106,8 +107,11 @@ Inspect the parameter traces. Note that the gtr run has many more model paramete
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+Probably not, given many parameters do not converge very well, so the global peak might not have been found by the MCMC.
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+There was only partial convergence between the runs, probably the trees/parameters were drawn from different posterior distributions, although the posterior statistic distribution did converge for both runs.
 
 ## Running on empty
 
