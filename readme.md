@@ -118,7 +118,7 @@ In the above analyses, the priors were set in the script and the data informed t
     rb GTR_GammaEmpty.Rev
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
-The posteriors are much much much smaller/more negative in the analyses where the data informed the posteriors. In the empty analyses, the posteriors are in the range of 0 to -60, whereas in the previous analyses, the posteriors are much more negative, in the range of -15700 to -15750. 
+The posteriors are much much much smaller/more negative in the analyses where the data informed the posteriors. In the empty analyses, the posteriors are in the range of 0 to -60, whereas in the previous analyses, the posteriors are much more negative, in the range of -13120 to -13190. 
 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
@@ -127,5 +127,6 @@ Because there is a flat prior on the trees, there is a very large number of bipa
 
 Copy any one of the three analysis files from above, add it to the git repo, and modify one or more of the priors. For example, in the GRT analyses you could change `alpha_prior <- 0.05`  to `alpha_prior <- 0.10`. Be sure to rename the output files so they don't write over your previous analyses.
 
-How did the change in the prior impact the results (ie, the posterior)?
+How did the change in the prior impact the results (ie, the posterior)? 
+The change in the prior did not have a noticeable effect on the posterior. Previously, the posterior range was between -15700 and -15750, whereas now the range is from -13120 to -13200. 
 
