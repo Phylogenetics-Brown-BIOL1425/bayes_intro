@@ -91,9 +91,12 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
     rb JukesCantor.Rev
 
-Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in? It was not a sufficient burn in, because when the burn-in was made to be 0 in Tracer, the trace was not yet stable and there was still some burn in for both run 1 and run 2.
+Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in? 
+
+It was not a sufficient burn in, because when the burn-in was made to be 0 in Tracer, the trace was not yet stable and there was still some burn in for both run 1 and run 2.
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
+
 The Marginal Probability Distribution for the two trees were similar in spread but had slightly different peaks, the peak of the tree for run 2 being slightly less negative than that of the tree for run 1. The trees were not the same either—-the same sister relationships were recovered from both runs for the derived taxa, but certain organisms were placed at different positions on the tree, resulting in a different overall topology. Examples include the position of *Tarsius syrinchta*, *Daubentonia madagascariensis*, *Samiri sciureus*, and the clade containing *Alouatta palliata* and *Cebus albifrons*. The runs did not converge, as the posterior distribution of the two runs were slightly different with regards to the peak, and the trees obtained for the two runs have significantly different topologies.
 
 
@@ -106,9 +109,11 @@ Now run the gtr analyses with:
 Inspect the parameter traces. Note that the gtr run has many more model parameters than the jc model above.
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in? 
+
 Just as with the Jukes Cantor run, when the burn-in in Tracer is set to 0, the trace for both runs still has a little bit of burn in before stabilizing. 1000 samples was therefore not a sufficient burn in in this case either.
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
+
 The marginal probability distribution for both trees are very similar to each other in distribution, with the distribution for run 2 very slightly larger in range, and the peak at about the same posterior probability for both runs, although it is noticeably higher for run 2. The trees were more different in topology from each other than the trees for the Jukes Cantor runs were. The sister relationships among the derived taxa are the same for both trees except for the relationship between *Callicebus donacophilus*, *Samiri sciureus*, and *Cebus albifrons*, which differs between the two trees in which two taxa are sister to each other. There are more differences going towards the root of both trees. Examples of differences in placement include the clade of *Callicebus donacophilus* and *Aotus trivirgatus*, and the placement of the taxa *Perodictius potto* and *Alouatta palliata*.
 
 ## Running on empty
@@ -118,6 +123,7 @@ In the above analyses, the priors were set in the script and the data informed t
     rb GTR_GammaEmpty.Rev
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
+
 The posteriors are much much much smaller/more negative in the analyses where the data informed the posteriors. In the empty analyses, the posteriors are in the range of 0 to -60, whereas in the previous analyses, the posteriors are much more negative, in the range of -13120 to -13190. 
 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
@@ -128,5 +134,6 @@ Because there is a flat prior on the trees, there is a very large number of bipa
 Copy any one of the three analysis files from above, add it to the git repo, and modify one or more of the priors. For example, in the GRT analyses you could change `alpha_prior <- 0.05`  to `alpha_prior <- 0.10`. Be sure to rename the output files so they don't write over your previous analyses.
 
 How did the change in the prior impact the results (ie, the posterior)? 
+
 The change in the prior did not have a noticeable effect on the posterior. Previously, the posterior range was between -13120 and -13190, whereas now the range is from -13120 to -13200. Comparing all of the posteriors together, with the four marginal probability distribution curves overlaid over each other, the distributions are very similar in their range of posteriors, with no significant aberration into larger or smaller posteriors. A similar conclusion is reached by comparing them in the estimates tab, with the intervals for the four posterior distributions not being appreciably different from each other.
 
