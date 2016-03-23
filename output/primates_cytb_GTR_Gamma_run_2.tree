@@ -1,0 +1,34 @@
+#NEXUS
+
+	Begin taxa;
+	Dimensions ntax=23;
+	Taxlabels
+		Alouatta_palliata
+		Aotus_trivirgatus
+		Callicebus_donacophilus
+		Cebus_albifrons
+		Cheirogaleus_major
+		Chlorocebus_aethiops
+		Colobus_guereza
+		Daubentonia_madagascariensis
+		Galago_senegalensis
+		Hylobates_lar
+		Lemur_catta
+		Lepilemur_hubbardorum
+		Loris_tardigradus
+		Macaca_mulatta
+		Microcebus_murinus
+		Nycticebus_coucang
+		Otolemur_crassicaudatus
+		Pan_paniscus
+		Perodicticus_potto
+		Propithecus_coquereli
+		Saimiri_sciureus
+		Tarsius_syrichta
+		Varecia_variegata_variegata
+		;
+End;
+
+Begin trees;
+tree TREE1 = [&R]((((((((Callicebus_donacophilus[&index=22]:0.279742,Saimiri_sciureus[&index=21]:0.419311)[&index=23,posterior=0.398867,height_95%_HPD={0.0007,0.0634}]:0.027934,Cebus_albifrons[&index=20]:0.279105)[&index=24,posterior=0.966011,height_95%_HPD={0.0218,0.1427}]:0.088593,Aotus_trivirgatus[&index=19]:0.139663)[&index=25,posterior=1.000000,height_95%_HPD={0.0132,0.1510}]:0.097686,Alouatta_palliata[&index=18]:0.062413)[&index=26,posterior=1.000000,height_95%_HPD={0.0893,0.3548}]:0.255930,(((Chlorocebus_aethiops[&index=17]:0.201166,Macaca_mulatta[&index=16]:0.201976)[&index=27,posterior=1.000000,height_95%_HPD={0.0085,0.1613}]:0.097898,Colobus_guereza[&index=15]:0.336844)[&index=28,posterior=1.000000,height_95%_HPD={0.0988,0.3200}]:0.235432,(Hylobates_lar[&index=14]:0.299615,Pan_paniscus[&index=13]:0.202647)[&index=29,posterior=0.976341,height_95%_HPD={0.0197,0.1673}]:0.103411)[&index=30,posterior=1.000000,height_95%_HPD={0.1290,0.3990}]:0.288076)[&index=31,posterior=1.000000,height_95%_HPD={0.1455,0.4411}]:0.325929,Tarsius_syrichta[&index=12]:0.491843)[&index=32,posterior=0.809064,height_95%_HPD={0.0006,0.1461}]:0.078178,(((((Cheirogaleus_major[&index=11]:0.130684,Microcebus_murinus[&index=10]:0.330184)[&index=33,posterior=1.000000,height_95%_HPD={0.0250,0.1458}]:0.093851,Lepilemur_hubbardorum[&index=9]:0.383474)[&index=34,posterior=0.968344,height_95%_HPD={0.0026,0.1135}]:0.061531,(Lemur_catta[&index=8]:0.148259,Varecia_variegata_variegata[&index=7]:0.286898)[&index=35,posterior=1.000000,height_95%_HPD={0.0231,0.1478}]:0.097176)[&index=36,posterior=0.481506,height_95%_HPD={0.0007,0.0857}]:0.040685,Propithecus_coquereli[&index=6]:0.221398)[&index=37,posterior=1.000000,height_95%_HPD={0.0970,0.3091}]:0.226866,Daubentonia_madagascariensis[&index=5]:0.453612)[&index=38,posterior=0.597468,height_95%_HPD={0.0003,0.1076}]:0.051582)[&index=39,posterior=1.000000,height_95%_HPD={0.0504,0.2315}]:0.157251,((Galago_senegalensis[&index=4]:0.154394,Otolemur_crassicaudatus[&index=3]:0.186549)[&index=40,posterior=1.000000,height_95%_HPD={0.0364,0.1934}]:0.132946,Perodicticus_potto[&index=2]:0.312908)[&index=41,posterior=1.000000,height_95%_HPD={0.0112,0.1394}]:0.085713,(Loris_tardigradus[&index=1]:0.349647,Nycticebus_coucang[&index=0]:0.284376)[&index=42,posterior=0.757747,height_95%_HPD={0.0082,0.1397}]:0.083466)[&index=43,posterior=1.000000,height_95%_HPD={9.9999,9.9999}]:0.000000;
+End;
