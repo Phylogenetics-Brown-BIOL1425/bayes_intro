@@ -93,7 +93,12 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
 Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+Yes, it seems like that was a sufficient burn in -- the traces don't jump around or anything the way we discussed in class that they might if you didn't have a long enough burn in and it found a new, better peak midway through or something. 
+
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
+
+Yes, the runs seemed to converge pretty strongly, the distributions/peaks match up really well when you look at them overlapping in the marginal probability distribution tab. 
 
 
 ## GTR analysis
