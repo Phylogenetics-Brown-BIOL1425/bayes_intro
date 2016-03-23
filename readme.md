@@ -93,11 +93,11 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
 Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
-- The burn in looks sufficient.
+- The burn in looks sufficient. Many samples didn't seem to need the burn in; it didn't differ much from the rest of the trace.
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
-- The runs did converge. The posterior distributions overlap closely and the trees had very similar topologies, though they disagreed on deeper nodes of the trees.
+- The runs did converge. The posterior distributions overlap closely and the trees had very similar topologies, though they disagreed on the placement of deeper nodes.
 
 
 ## GTR analysis
@@ -110,8 +110,11 @@ Inspect the parameter traces. Note that the gtr run has many more model paramete
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+- It was a sufficient burn in. The burn in for this model was more necessary than it was for the JC run based on the traces.
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+- The runs converged. The posterior distributions had significant overlap, though not quite as much as the JC run did. The trees were mostly similar, though they also had disagreements at the deeper nodes.
 
 ## Running on empty
 
