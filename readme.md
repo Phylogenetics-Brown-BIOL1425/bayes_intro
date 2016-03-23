@@ -111,8 +111,11 @@ Inspect the parameter traces. Note that the gtr run has many more model paramete
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+No, not quite. Both runs have a dip in the very beginning of the trace that seems to suggest they could have had a bit longer of a burn in period. 
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+The runs seemed to converge again based on looking at the marginal probability distribution tab again -- I'm about to go home but I'll update this once I actually take a look at the trees and not just the distributions. 
 
 ## Running on empty
 
