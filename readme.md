@@ -122,6 +122,7 @@ In the above analyses, the priors were set in the script and the data informed t
     rb GTR_GammaEmpty.Rev
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. **How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?**
+
 The parameter estimates and marginal probability distributions in this example are not as close as those in the prior two analyses. Having the data as well as the priors inform the posteriors seems to help funnel each run toward the best tree - without the constraint of the data, the analyses are more free to wind up in different areas of tree space.
 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
