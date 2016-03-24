@@ -131,5 +131,6 @@ Because there is a flat prior on the trees, there is a very large number of bipa
 
 Copy any one of the three analysis files from above, add it to the git repo, and modify one or more of the priors. For example, in the GRT analyses you could change `alpha_prior <- 0.05`  to `alpha_prior <- 0.10`. Be sure to rename the output files so they don't write over your previous analyses.
 
-How did the change in the prior impact the results (ie, the posterior)?
-
+**How did the change in the prior impact the results (ie, the posterior)?**
+In this case, the change in the prior seems to have had a minimal consistant impact on the results. The 1st run with prior = 0.10 has a posterior of 240, and the second has a posterior 
+of 338 (the two runs with prior = 0.05 have posteriors of 293 and 281). Parameter estimates are nearly identical under the different priors, as are marginal probability distributions and parameter traces. Overall, there is nothing striking about the results I gathered that suggests that the change from prior = 0.05 to prior = 0.10 had a significant impact on my results. The only possible significant difference is that posteriors were more extreme with a higher prior, but I don't know if the observed difference can truly be considered 'significant' in a proper sense.
