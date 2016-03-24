@@ -93,8 +93,12 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
 Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+__**Yes, it would appear so. The traces of both samples post-1000 sample burn-in do not begin with any directional trend.**__
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+__**yes! Trees from both runs have the same topology, virtually identical confidence for internal nodes. 
+**__
 
 ## GTR analysis
 
@@ -106,8 +110,11 @@ Inspect the parameter traces. Note that the gtr run has many more model paramete
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+__**here the traces look like they could use more burn in. my first run trace, specifically, has a large errant peak around 3500 generations that would ideally be cut out.**__
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+__**yes, the runs converged on both the same topology and posterior**__
 
 ## Running on empty
 
@@ -117,6 +124,9 @@ In the above analyses, the priors were set in the script and the data informed t
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
 
+__**posteriors are much, much smaller when running on empty as compared to running with an informative prior**__
+
+__**posteriors are much, much larger, presumably because 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
 
