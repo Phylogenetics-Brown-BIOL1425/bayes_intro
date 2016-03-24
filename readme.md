@@ -93,13 +93,15 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
 Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
-##** The trace profiles suggests that the burning was enough. As the real searches are similar to the burning searches.**
+**The trace profiles suggests that the burning was enough. As the real searches are similar to the burning searches.**
 
-![Burning](https://rawgit.com/Jcbnunez/bayes_intro/master/Burning_JC.png "Figure 3 2016 Gene Trees")
+![Burning](https://rawgit.com/Jcbnunez/bayes_intro/master/Burning_JC.png "")
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
-##**h  **
+**The general posterior probabilities converged for most parameters. Very few branches showed non-convergent PDFs**
+
+![JC_PDF](https://rawgit.com/Jcbnunez/bayes_intro/master/JC_marginalPDF.png "")
 
 ## GTR analysis
 
@@ -111,8 +113,15 @@ Inspect the parameter traces. Note that the gtr run has many more model paramete
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+**For both runs, 10K generations seems to be sufficient burn in -see figures-**
+
+![burninGTR](https://rawgit.com/Jcbnunez/bayes_intro/master/gtrbutnin.png "")
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+**Yes. Parameters converged**
+
+![GTRKDE](https://rawgit.com/Jcbnunez/bayes_intro/master/GTRKDE.png "")
 
 ## Running on empty
 
