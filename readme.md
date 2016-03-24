@@ -93,8 +93,13 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
 Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+##** The trace profiles suggests that the burning was enough. As the real searches are similar to the burning searches.**
+
+![Burning](https://rawgit.com/Jcbnunez/bayes_intro/master/Burning_JC.png "Figure 3 2016 Gene Trees")
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+##**h  **
 
 ## GTR analysis
 
