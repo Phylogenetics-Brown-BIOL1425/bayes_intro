@@ -56,7 +56,7 @@ pi_empirical <- data.getEmpiricalBaseFrequencies()
 # Among Site Rate Variation #
 #############################
 
-alpha_prior <- 0.05
+alpha_prior <- 0.10
 alpha ~ dnExponential( alpha_prior )
 gamma_rates := fnDiscretizeGamma( alpha, alpha, 4, false )
 
