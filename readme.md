@@ -98,7 +98,7 @@ Yes, it seems like that was a sufficient burn in -- the traces don't jump around
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
-Yes, the runs seemed to converge pretty strongly, the distributions/peaks match up really well when you look at them overlapping in the marginal probability distribution tab. 
+Yes, the runs seemed to converge pretty strongly, the distributions/peaks match up really well when you look at them overlapping in the marginal probability distribution tab, and the trees coming up with the same topology. 
 
 
 ## GTR analysis
@@ -111,11 +111,11 @@ Inspect the parameter traces. Note that the gtr run has many more model paramete
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
-No, not quite. Both runs have a dip in the very beginning of the trace that seems to suggest they could have had a bit longer of a burn in period. 
+No, not quite. Both runs have a dip in the very beginning of the trace that seems to suggest they could have used a bit longer burn in period. 
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
-The runs seemed to converge again based on looking at the marginal probability distribution tab again -- I'm about to go home but I'll update this once I actually take a look at the trees and not just the distributions. 
+The runs seemed to converge again based on looking at the marginal probability distribution tab again. The trees also had the same topology. 
 
 ## Running on empty
 
@@ -124,6 +124,9 @@ In the above analyses, the priors were set in the script and the data informed t
     rb GTR_GammaEmpty.Rev
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
+
+They're incredibly different from one another. The estimates are so different you would have to zoom out on the x axis (or log it, I guess) really far to even be able to see the two sets of distributions on the same axes. 
+
 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
@@ -134,3 +137,4 @@ Copy any one of the three analysis files from above, add it to the git repo, and
 
 How did the change in the prior impact the results (ie, the posterior)?
 
+I did this for the GTR analysis and changed the prior the way the example suggested. It didn't seem to affect the results too much from looking at it in tracer, the distributions didn't seem too far off. But then I looked at the trees, and the topology was actually pretty different. 
