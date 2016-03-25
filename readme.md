@@ -124,6 +124,8 @@ In the above analyses, the priors were set in the script and the data informed t
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
 
+- Using the data to inform the posterior leads to a much more negative posterior distribution.
+
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
 
