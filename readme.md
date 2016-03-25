@@ -99,8 +99,9 @@ Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generatio
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
-**The general posterior probabilities converged for most parameters. Very few branches showed non-convergent PDFs**
+**The general posterior probabilities converged for most parameters (See figure Below). Very few branches showed non-convergent PDFs**
 
+Figure: PDFs of posterior probabilities for JC analyses
 ![JC_PDF](https://rawgit.com/Jcbnunez/bayes_intro/master/JC_marginalPDF.png "")
 
 ## GTR analysis
@@ -119,7 +120,7 @@ Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
-**Yes. Parameters converged**
+**Yes. Parameters converged. See figure below**
 
 ![GTRKDE](https://rawgit.com/Jcbnunez/bayes_intro/master/GTRKDE.png "")
 
@@ -129,7 +130,11 @@ In the above analyses, the priors were set in the script and the data informed t
 
     rb GTR_GammaEmpty.Rev
 
-In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
+In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. 
+
+How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
+
+**In the Running on empty run, the mean prior = mean posterior**
 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
@@ -140,3 +145,6 @@ Copy any one of the three analysis files from above, add it to the git repo, and
 
 How did the change in the prior impact the results (ie, the posterior)?
 
+The mean posterior for both runs (prior 0.05 and prior 0.1) is effectively the same (see figure). This may be due to the presence of a robust phylogenetic signal in the data.
+
+![posts](https://rawgit.com/Jcbnunez/bayes_intro/master/allposteriors.png "")

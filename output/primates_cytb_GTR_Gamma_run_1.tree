@@ -1,0 +1,34 @@
+#NEXUS
+
+	Begin taxa;
+	Dimensions ntax=23;
+	Taxlabels
+		Alouatta_palliata
+		Aotus_trivirgatus
+		Callicebus_donacophilus
+		Cebus_albifrons
+		Cheirogaleus_major
+		Chlorocebus_aethiops
+		Colobus_guereza
+		Daubentonia_madagascariensis
+		Galago_senegalensis
+		Hylobates_lar
+		Lemur_catta
+		Lepilemur_hubbardorum
+		Loris_tardigradus
+		Macaca_mulatta
+		Microcebus_murinus
+		Nycticebus_coucang
+		Otolemur_crassicaudatus
+		Pan_paniscus
+		Perodicticus_potto
+		Propithecus_coquereli
+		Saimiri_sciureus
+		Tarsius_syrichta
+		Varecia_variegata_variegata
+		;
+End;
+
+Begin trees;
+tree TREE1 = [&R](((((((Cheirogaleus_major[&index=22,posterior=1.000000,ccp=1.000000]:0.118587,Microcebus_murinus[&index=21,posterior=1.000000,ccp=1.000000]:0.298311)[&index=23,posterior=0.996335,ccp=0.995906,height_95%_HPD={0.08388,0.122987}]:0.085035,Lepilemur_hubbardorum[&index=20,posterior=1.000000,ccp=0.995906]:0.348237)[&index=24,posterior=0.895368,ccp=0.957417,height_95%_HPD={0.011991,0.090699}]:0.054553,(Lemur_catta[&index=19,posterior=1.000000,ccp=1.000000]:0.131372,Varecia_variegata_variegata[&index=18,posterior=1.000000,ccp=1.000000]:0.262642)[&index=25,posterior=1.000000,ccp=0.957417,height_95%_HPD={0.063999,0.12603}]:0.089911)[&index=26,posterior=0.469510,ccp=0.469510,height_95%_HPD={0.046182,0.061553}]:0.035149,Propithecus_coquereli[&index=17,posterior=1.000000,ccp=0.469510]:0.192734)[&index=27,posterior=1.000000,ccp=1.000000,height_95%_HPD={0.201451,0.271524}]:0.194725,Daubentonia_madagascariensis[&index=16,posterior=1.000000,ccp=1.000000]:0.398308)[&index=28,posterior=0.526158,ccp=0.664467,height_95%_HPD={0.041561,0.089296}]:0.052198,(((Galago_senegalensis[&index=15,posterior=1.000000,ccp=1.000000]:0.142840,Otolemur_crassicaudatus[&index=14,posterior=1.000000,ccp=1.000000]:0.171556)[&index=29,posterior=1.000000,ccp=1.000000,height_95%_HPD={0.113381,0.168598}]:0.118970,Perodicticus_potto[&index=13,posterior=1.000000,ccp=1.000000]:0.275997)[&index=30,posterior=1.000000,ccp=0.996001,height_95%_HPD={0.09427,0.115222}]:0.072619,(Loris_tardigradus[&index=12,posterior=1.000000,ccp=1.000000]:0.315039,Nycticebus_coucang[&index=11,posterior=1.000000,ccp=1.000000]:0.257781)[&index=31,posterior=0.996001,ccp=0.996001,height_95%_HPD={0.072416,0.119487}]:0.081931)[&index=32,posterior=1.000000,ccp=0.664467,height_95%_HPD={0.145358,0.196064}]:0.130688)[&index=33,posterior=0.353549,ccp=0.353549,height_95%_HPD={0.011034,0.121128}]:0.069219,(((((Callicebus_donacophilus[&index=10,posterior=1.000000,ccp=1.000000]:0.244845,Saimiri_sciureus[&index=9,posterior=1.000000,ccp=1.000000]:0.376402)[&index=34,posterior=0.409197,ccp=0.462002,height_95%_HPD={0.020603,0.053242}]:0.029366,Cebus_albifrons[&index=8,posterior=1.000000,ccp=0.462002]:0.249604)[&index=35,posterior=0.885705,ccp=0.886000,height_95%_HPD={0.041865,0.114845}]:0.073234,Aotus_trivirgatus[&index=7,posterior=1.000000,ccp=0.886000]:0.128089)[&index=36,posterior=0.999667,ccp=0.999667,height_95%_HPD={0.06858,0.130979}]:0.093734,Alouatta_palliata[&index=6,posterior=1.000000,ccp=0.999667]:0.055426)[&index=37,posterior=1.000000,ccp=1.000000,height_95%_HPD={0.217824,0.309883}]:0.223518,(((Chlorocebus_aethiops[&index=5,posterior=1.000000,ccp=1.000000]:0.185741,Macaca_mulatta[&index=4,posterior=1.000000,ccp=1.000000]:0.191264)[&index=38,posterior=1.000000,ccp=1.000000,height_95%_HPD={0.060857,0.13158}]:0.083828,Colobus_guereza[&index=3,posterior=1.000000,ccp=1.000000]:0.297200)[&index=39,posterior=1.000000,ccp=0.994668,height_95%_HPD={0.173368,0.281048}]:0.215743,(Hylobates_lar[&index=2,posterior=1.000000,ccp=1.000000]:0.281135,Pan_paniscus[&index=1,posterior=1.000000,ccp=1.000000]:0.181165)[&index=40,posterior=0.994668,ccp=0.994668,height_95%_HPD={0.105038,0.13994}]:0.094928)[&index=41,posterior=1.000000,ccp=1.000000,height_95%_HPD={0.247206,0.343711}]:0.262373)[&index=42,posterior=1.000000,ccp=0.392536,height_95%_HPD={0.303994,0.382638}]:0.288536,Tarsius_syrichta[&index=0,posterior=1.000000,ccp=0.402199]:0.442992)[&index=43,posterior=1.000000,ccp=1.000000,height_95%_HPD={-1,nan}]:0.000000;
+End;
