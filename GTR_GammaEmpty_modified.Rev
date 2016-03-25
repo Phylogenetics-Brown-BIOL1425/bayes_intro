@@ -39,9 +39,9 @@ er_prior <- v(1,1,1,1,1,1)
 er ~ dnDirichlet(er_prior)
 moves[++mi] = mvSimplexElementScale(er,weight=3)
 
-#Changed pi_prior from v(1,1,1,1) to v(10,10,1,1)
+#Changed pi_prior from v(1,1,1,1) to v(1000,1000,1,1)
 #pi_prior <- v(1,1,1,1) 
-pi_prior <- v(10,10,1,1)
+pi_prior <- v(1000,1000,1,1)
 pi ~ dnDirichlet(pi_prior)
 moves[++mi] = mvSimplexElementScale(pi,weight=2)
 

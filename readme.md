@@ -135,3 +135,5 @@ Copy any one of the three analysis files from above, add it to the git repo, and
 
 How did the change in the prior impact the results (ie, the posterior)?
 
+- By increasing two of the pi priors by three orders of magnitude, I increased the posterior distribution from the original GTR_GammaEmpty analysis.
+
