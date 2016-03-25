@@ -93,7 +93,12 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
 Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+Yes, it seems like that was a sufficient burn in -- the traces don't jump around or anything the way we discussed in class that they might if you didn't have a long enough burn in and it found a new, better peak midway through or something. 
+
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
+
+Yes, the runs seemed to converge pretty strongly, the distributions/peaks match up really well when you look at them overlapping in the marginal probability distribution tab, and the trees come up with the same topology. 
 
 
 ## GTR analysis
@@ -106,16 +111,22 @@ Inspect the parameter traces. Note that the gtr run has many more model paramete
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+No, not quite. Both runs have a dip in the very beginning of the trace that seems to suggest they could have used a bit longer burn in period. 
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+The runs seemed to converge again based on looking at the marginal probability distribution tab. The trees also had the same topology. 
 
 ## Running on empty
 
-In the above analyses, the priors were set in the script and the data informed the posteriors. You can also "run the analysis on empty", ie not have the data inform the psoterior and only sample based on the prior, by setting the `underPrior=true` flag. To conduct such an analysis, run:
+In the above analyses, the priors were set in the script and the data informed the posteriors. You can also "run the analysis on empty", ie not have the data inform the posterior and only sample based on the prior, by setting the `underPrior=true` flag. To conduct such an analysis, run:
 
     rb GTR_GammaEmpty.Rev
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
+
+They're incredibly different from one another. The estimates are so different you would have to zoom out on the x axis (or log it, I guess) really far to even be able to see the two sets of distributions on the same axes. The data push the posterior distribution to a completely different place than when you run without it, which means the data should have a pretty strong signal. 
+
 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
@@ -126,3 +137,4 @@ Copy any one of the three analysis files from above, add it to the git repo, and
 
 How did the change in the prior impact the results (ie, the posterior)?
 
+I did this for the GTR analysis and changed the prior the way the example suggested. The distributions in tracer didn't seem too radically different, but then I looked at the trees, and the topology was actually really different between the first GTR run and this run with the changed prior. After what Casey said in class, I think this is probably because I put a stronger constraint on the prior, which might not necessarily change the parameter estimate but could end up drastically changing the estimate of the tree in its attempt to get the posteriors to conform to the prior. 
