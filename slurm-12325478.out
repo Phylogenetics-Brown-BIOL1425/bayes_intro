@@ -1,0 +1,84 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 12325478
+##  Job Name : batch1.sh
+##  Nodelist : node146
+##      CPUs : 4
+##  Mem/Node : 16384 MB
+## Directory : /gpfs/scratch/guest382/bayes_intro
+##   Started : Fri Mar 25 00:46:25 EDT 2016
+###############################################################################
+module: loading 'git/2.2.1'
+module: loading 'revbayes/Mar2016'
+
+RevBayes version 1.0.0 beta 4 (2016-02-05)
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("GTR_Gamma_2.Rev")
+   Processing file "GTR_Gamma_2.Rev"
+   Successfully read one character matrix from file 'data/primates_cytb.nex'
+
+   Running burn-in phase of Monte Carlo sampler for 10000 iterations.
+   This simulation runs 2 independent replicates.
+   The simulator uses 48 different moves in a random move schedule with 52 moves per iteration
+
+Progress:
+0---------------25---------------50---------------75--------------100
+********************************************************************
+
+   Running MCMC simulation
+   This simulation runs 2 independent replicates.
+   The simulator uses 48 different moves in a random move schedule with 52 moves per iteration
+
+Iter        |      Posterior   |     Likelihood   |          Prior   |             TL   |    elapsed   |        ETA   |
+-----------------------------------------------------------------------------------------------------------------------
+0           |       -13154.9   |       -13083.2   |       -71.6782   |        9.07784   |   00:00:00   |   --:--:--   |
+1000        |       -13147.3   |         -13088   |       -59.3772   |        7.84732   |   00:02:12   |   --:--:--   |
+2000        |       -13163.2   |         -13098   |       -65.2378   |        8.43359   |   00:04:28   |   01:02:32   |
+3000        |       -13156.5   |       -13098.2   |        -58.259   |        7.73477   |   00:06:53   |   01:01:57   |
+4000        |       -13150.7   |       -13089.9   |        -60.735   |        7.98307   |   00:09:06   |   00:59:09   |
+5000        |       -13158.4   |       -13089.8   |       -68.5926   |        8.76903   |   00:11:13   |   00:56:05   |
+6000        |         -13154   |       -13084.3   |       -69.6112   |        8.87115   |   00:13:29   |   00:53:56   |
+7000        |         -13155   |       -13093.4   |       -61.5782   |        8.06796   |   00:15:28   |   00:50:49   |
+8000        |       -13152.9   |       -13088.7   |       -64.2827   |        8.33771   |   00:22:06   |   01:00:46   |
+9000        |       -13153.2   |         -13084   |       -69.2541   |        8.83533   |   00:36:05   |   01:24:11   |
+10000       |       -13176.6   |       -13098.4   |       -78.1784   |        9.72808   |   00:48:40   |   01:37:20   |
+11000       |       -13156.6   |       -13083.4   |       -73.2036   |         9.2301   |   00:57:27   |   01:39:13   |
+12000       |       -13143.2   |       -13100.8   |       -42.4223   |        6.15114   |   01:04:54   |   01:37:21   |
+13000       |       -13147.7   |       -13080.6   |       -67.0483   |        8.61446   |   01:10:38   |   01:32:22   |
+14000       |         -13151   |       -13091.5   |       -59.5138   |        7.86145   |   01:15:45   |   01:26:34   |
+15000       |       -13155.2   |       -13097.7   |       -57.5417   |         7.6638   |   01:17:19   |   01:17:19   |
+16000       |       -13154.5   |       -13079.9   |       -74.6248   |        9.37202   |   01:19:03   |   01:09:10   |
+17000       |       -13173.5   |       -13095.8   |       -77.6887   |        9.67894   |   01:20:46   |   01:01:45   |
+18000       |       -13150.4   |       -13081.9   |       -68.5484   |        8.76461   |   01:22:06   |   00:54:44   |
+19000       |       -13158.2   |       -13105.2   |       -52.9958   |        7.20894   |   01:23:32   |   00:48:21   |
+
+
+Iter        |      Posterior   |     Likelihood   |          Prior   |             TL   |    elapsed   |        ETA   |
+-----------------------------------------------------------------------------------------------------------------------
+20000       |       -13144.3   |       -13094.3   |       -50.0363   |        6.91302   |   01:24:52   |   00:42:26   |
+21000       |         -13159   |         -13098   |       -61.0136   |        8.01107   |   01:26:13   |   00:36:57   |
+22000       |       -13152.5   |       -13094.1   |       -58.3468   |        7.74441   |   01:27:39   |   00:31:52   |
+23000       |       -13156.1   |       -13096.4   |         -59.72   |        7.88163   |   01:29:07   |   00:27:07   |
+24000       |       -13164.5   |       -13099.9   |       -64.5525   |        8.36461   |   01:30:35   |   00:22:38   |
+25000       |       -13162.3   |       -13095.6   |       -66.6972   |         8.5791   |   01:32:02   |   00:18:24   |
+26000       |       -13166.2   |       -13078.6   |       -87.5996   |        10.6701   |   01:33:29   |   00:14:22   |
+27000       |         -13156   |         -13085   |       -70.9742   |        9.00733   |   01:34:52   |   00:10:32   |
+28000       |       -13155.8   |       -13088.2   |       -67.5898   |        8.66858   |   01:36:12   |   00:06:52   |
+29000       |       -13162.9   |       -13104.9   |       -58.0795   |         7.7178   |   01:37:34   |   00:03:21   |
+30000       |       -13145.2   |       -13096.5   |       -48.6837   |        6.77809   |   01:39:01   |   00:00:00   |
+   Processing file "output/primates_cytb_GTR_Gamma_2_non_clock_run_1.trees"
+   Processing file "output/primates_cytb_GTR_Gamma_2_non_clock_run_2.trees"
+   Compiling MAP tree from 3001 trees in tree trace, using a burnin of 750 trees.
+   Compiling 95% HPD node ages from 3001 total trees in tree trace, using a burnin of 750 trees.
+   Annotating tree ...
+   Compiling MAP tree from 3001 trees in tree trace, using a burnin of 750 trees.
+   Compiling 95% HPD node ages from 3001 total trees in tree trace, using a burnin of 750 trees.
+   Annotating tree ...
+   Processing of file "GTR_Gamma_2.Rev" completed
+> 

@@ -70,7 +70,7 @@ moves[++mi] = mvScale(alpha,weight=2)
 ##############
 
 # construct a variable for the tree drawn from a birth death process
-topology ~ dnUniformTopology(names=taxa)
+topology ~ dnUniformTopology(taxa=taxa)
 
 # add topology Metropolis-Hastings moves
 moves[++mi] = mvNNI(topology, weight=1.0)
