@@ -145,6 +145,6 @@ Copy any one of the three analysis files from above, add it to the git repo, and
 
 How did the change in the prior impact the results (ie, the posterior)?
 
-The mean posterior for both runs (prior 0.05 and prior 0.1) is effectively the same (see figure). This may be due to the presence of a robust phylogenetic signal in the data.
+**The mean posterior for both runs (prior 0.05 and prior 0.1) is effectively the same (see figure). This may be due to the presence of a robust phylogenetic signal in the data.**
 
 ![posts](https://rawgit.com/Jcbnunez/bayes_intro/master/allposteriors.png "")
