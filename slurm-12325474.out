@@ -1,0 +1,27 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 12325474
+##  Job Name : batch1.sh
+##  Nodelist : node136
+##      CPUs : 4
+##  Mem/Node : 16384 MB
+## Directory : /gpfs/scratch/guest382/bayes_intro
+##   Started : Fri Mar 25 00:45:03 EDT 2016
+###############################################################################
+module: loading 'git/2.2.1'
+module: loading 'revbayes/Mar2016'
+
+RevBayes version 1.0.0 beta 4 (2016-02-05)
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("GTR_Gamma_2.Rev")
+   Processing file "GTR_Gamma_2.Rev"
+   Successfully read one character matrix from file 'data/primates_cytb.nex'
+   Error:	Argument label 'names' matches no untaken parameter labels.
+   Error:	Problem processing line 73 in file "GTR_Gamma_2.Rev"
+> 
