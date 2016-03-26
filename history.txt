@@ -1,0 +1,3 @@
+q()
+rb JukesCantor.Rev
+quit()

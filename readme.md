@@ -92,8 +92,11 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
     rb JukesCantor.Rev
 
 Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
+Overall, yes. Most of the traces shows a consistant hovering around the same point and are relatively flat. However, for runs 1+2 there are 4 traces that jump around and form a stepwise shape, and have low ESS values that are red. 
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
+The parameter estimates and trees from the two runs are extremely similar. The marginal probability distributions and traces for the two runs overlap almost identically. The posterior and likelihood estimates (e.g. mean, stdev, variance, median, etc.) are all extremely similar to each other.
+The two trees recovered display the same relationships between taxa, and when posterior values are added to the nodes, these values are similar to each other. Most of these posterior probabilities are 1 or close to 1, with the exception of a clade containing Alouatta, Aotus, Callicebus, and Cebus species, which is very low at ~0.3 for both trees.
 
 
 ## GTR analysis
@@ -105,9 +108,14 @@ Now run the gtr analyses with:
 Inspect the parameter traces. Note that the gtr run has many more model parameters than the jc model above.
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
+No, I don't think so. Looking at the traces, there are many that form step-wise patterns, occupy a large amount of vertical space (instead of white "sandwiching" a trace that hovers around a relatively consistent, darker horizontal line), and have low ESS scores in red and yellow. The greyed-out burn-in traces also show a climbing pattern and don't seem to reach a consistent position during the burn-in.
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
+The parameter estimates for the two runs are quite similar to each other, but not as similar as for the Jukes Cantor runs, especially for posterior and likelihood variances and std errors. The marginal probability distributions and traces mostly overlap with each other, but not as tightly as for the JC runs. 
+The two trees are different. Tree 1 shows Tarsius as belonging to a clade containing Cheirogaleus, Microcebus, Lepilemur, Lemur, Varecia, Propithecus, Daubentonia, Galago, Otelemur, Perodictus, Loris, and Nycticebus, and this has a posterior probability of 1. Tree 2 shows something quite different, and instead Tarsius does not cluster with any of the other primates in forming a clade and is its own separate branch.
+Tree 2 also shows Callcebus, Saimiri, Cebus, Aotus, Alouatta, Chlorocebus, Macaca, Colobus, Hyobates, and Pan all sharing an additional common ancestor that is not included in Tree 1.
 
+Note to self: Didn't change all output file names for the final analyses below, and I redid the GTR_Gamma.Rev analyses, so results in output folder now may be different than the observations described.
 
 ## Running on empty
 
@@ -116,6 +124,9 @@ In the above analyses, the priors were set in the script and the data informed t
     rb GTR_GammaEmpty.Rev
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
+The empty runs are both similar to each other in terms of posterior estimates. Without data, the marginal probability distribution is heavily skewed right to have many probabilities at or near zero; the posterior means for the empty runs are extremely low (~-26) compared to the prior analyses (~-13160), but the stdev and variances are similar across all 4 runs.
+Also, the mean likelihood for these runs is zero.
+
 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
@@ -125,4 +136,5 @@ Because there is a flat prior on the trees, there is a very large number of bipa
 Copy any one of the three analysis files from above, add it to the git repo, and modify one or more of the priors. For example, in the GRT analyses you could change `alpha_prior <- 0.05`  to `alpha_prior <- 0.10`. Be sure to rename the output files so they don't write over your previous analyses.
 
 How did the change in the prior impact the results (ie, the posterior)?
-
+I changed the GTR model to have an alpha_prior of 10, and for the output files to have "Changed" in the title to differentiate them from prior analyses. This did not change the parameter estimates significantly, nor the marginal probability distributions.
+The trees however have pretty different topologies, with taxa moving around and sister relationships also moving around when comparing the two recovered trees.
