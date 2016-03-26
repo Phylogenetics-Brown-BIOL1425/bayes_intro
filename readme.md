@@ -131,7 +131,7 @@ Also, the mean likelihood for these runs is zero.
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
 
-## Explore the impact of the priors
+## Explore the impact of the priors.
 
 Copy any one of the three analysis files from above, add it to the git repo, and modify one or more of the priors. For example, in the GRT analyses you could change `alpha_prior <- 0.05`  to `alpha_prior <- 0.10`. Be sure to rename the output files so they don't write over your previous analyses.
 
