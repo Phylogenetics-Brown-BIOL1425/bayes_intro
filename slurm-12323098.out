@@ -1,0 +1,133 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 12323098
+##  Job Name : run_script.sh
+##  Nodelist : node134
+##      CPUs : 4
+##  Mem/Node : 16384 MB
+## Directory : /gpfs/data/biol1425/guest319/bayes_intro
+##   Started : Thu Mar 24 13:09:02 EDT 2016
+###############################################################################
+module: loading 'revbayes/Mar2016'
+
+RevBayes version 1.0.0 beta 4 (2016-02-05)
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("JukesCantor.Rev")
+   Processing file "JukesCantor.Rev"
+   Successfully read one character matrix from file 'data/primates_cytb.nex'
+
+   Running MCMC simulation
+   This simulation runs 2 independent replicates.
+   The simulator uses 45 different moves in a random move schedule with 45 moves per iteration
+
+Iter        |      Posterior   |     Likelihood   |          Prior   |             TL   |    elapsed   |        ETA   |
+-----------------------------------------------------------------------------------------------------------------------
+0           |       -20025.4   |         -19990   |       -35.4143   |        4.95968   |   00:00:00   |   --:--:--   |
+1000        |         -15724   |       -15707.9   |       -16.1843   |        3.03668   |   00:00:22   |   --:--:--   |
+2000        |       -15737.9   |       -15722.3   |       -15.5955   |         2.9778   |   00:00:43   |   00:13:37   |
+3000        |       -15728.2   |       -15711.6   |       -16.6051   |        3.07876   |   00:01:04   |   00:13:09   |
+4000        |       -15724.7   |       -15708.9   |       -15.8612   |        3.00437   |   00:01:25   |   00:12:45   |
+5000        |       -15732.5   |       -15715.6   |       -16.9358   |        3.11183   |   00:01:46   |   00:12:22   |
+6000        |       -15728.6   |       -15713.2   |       -15.3541   |        2.95367   |   00:02:07   |   00:11:59   |
+7000        |       -15729.7   |       -15713.4   |       -16.2332   |        3.04157   |   00:02:28   |   00:11:37   |
+8000        |         -15741   |       -15724.9   |       -16.1246   |        3.03072   |   00:02:49   |   00:11:16   |
+9000        |       -15734.8   |       -15718.8   |       -16.0337   |        3.02162   |   00:03:10   |   00:10:54   |
+10000       |       -15730.2   |       -15714.1   |       -16.0885   |         3.0271   |   00:03:31   |   00:10:33   |
+11000       |       -15731.9   |       -15715.4   |       -16.5209   |        3.07034   |   00:03:53   |   00:10:14   |
+12000       |       -15733.8   |       -15717.7   |       -16.1278   |        3.03103   |   00:04:15   |   00:09:55   |
+13000       |       -15721.8   |         -15706   |       -15.7343   |        2.99168   |   00:04:37   |   00:09:35   |
+14000       |       -15722.4   |       -15706.4   |       -16.0059   |        3.01884   |   00:05:00   |   00:09:17   |
+15000       |         -15724   |       -15708.1   |        -15.986   |        3.01686   |   00:05:22   |   00:08:56   |
+16000       |       -15729.1   |       -15713.7   |       -15.3637   |        2.95462   |   00:05:44   |   00:08:36   |
+17000       |       -15721.2   |       -15704.9   |       -16.2793   |        3.04619   |   00:06:06   |   00:08:15   |
+18000       |       -15722.9   |       -15707.8   |       -15.1513   |        2.93338   |   00:06:27   |   00:07:53   |
+19000       |       -15728.5   |       -15712.3   |       -16.1791   |        3.03616   |   00:06:48   |   00:07:30   |
+
+
+Iter        |      Posterior   |     Likelihood   |          Prior   |             TL   |    elapsed   |        ETA   |
+-----------------------------------------------------------------------------------------------------------------------
+20000       |       -15726.6   |       -15709.8   |       -16.7791   |        3.09616   |   00:07:09   |   00:07:09   |
+21000       |       -15731.1   |         -15714   |        -17.151   |        3.13335   |   00:07:30   |   00:06:47   |
+22000       |       -15736.2   |       -15719.5   |       -16.6496   |        3.08322   |   00:07:51   |   00:06:25   |
+23000       |       -15731.1   |       -15715.2   |       -15.9558   |        3.01383   |   00:08:12   |   00:06:03   |
+24000       |         -15738   |       -15721.6   |       -16.4139   |        3.05964   |   00:08:33   |   00:05:42   |
+25000       |       -15721.9   |       -15706.2   |       -15.6547   |        2.98373   |   00:08:54   |   00:05:20   |
+26000       |       -15728.5   |       -15712.8   |       -15.6173   |        2.97999   |   00:09:15   |   00:04:58   |
+27000       |         -15735   |       -15718.3   |       -16.7174   |        3.08999   |   00:09:36   |   00:04:37   |
+28000       |         -15724   |       -15706.8   |       -17.1811   |        3.13637   |   00:09:57   |   00:04:15   |
+29000       |       -15721.5   |       -15705.8   |       -15.6777   |        2.98602   |   00:10:18   |   00:03:54   |
+30000       |       -15723.4   |         -15707   |       -16.4417   |        3.06243   |   00:10:40   |   00:03:33   |
+31000       |       -15718.6   |       -15703.1   |       -15.5541   |        2.97366   |   00:11:01   |   00:03:11   |
+32000       |       -15726.9   |       -15710.6   |       -16.3088   |        3.04913   |   00:11:22   |   00:02:50   |
+33000       |       -15722.9   |       -15706.8   |        -16.088   |        3.02706   |   00:11:43   |   00:02:29   |
+34000       |       -15725.6   |       -15710.3   |        -15.275   |        2.94576   |   00:12:04   |   00:02:07   |
+35000       |       -15722.9   |       -15707.4   |       -15.5746   |        2.97572   |   00:12:26   |   00:01:46   |
+36000       |       -15723.6   |       -15708.9   |       -14.7088   |        2.88913   |   00:12:47   |   00:01:25   |
+37000       |       -15720.3   |       -15704.2   |       -16.1673   |        3.03499   |   00:13:08   |   00:01:03   |
+38000       |       -15725.5   |       -15708.4   |         -17.01   |        3.11926   |   00:13:29   |   00:00:42   |
+39000       |       -15730.5   |       -15714.2   |       -16.3034   |        3.04859   |   00:13:51   |   00:00:21   |
+
+
+Iter        |      Posterior   |     Likelihood   |          Prior   |             TL   |    elapsed   |        ETA   |
+-----------------------------------------------------------------------------------------------------------------------
+40000       |       -15735.9   |       -15719.9   |       -15.9712   |        3.01537   |   00:14:12   |   00:00:00   |
+   Processing file "output/primates_cytb_JC_run_1.trees"
+   Processing file "output/primates_cytb_JC_run_2.trees"
+   Compiling MAP tree from 4001 trees in tree trace, using a burnin of 1000 trees.
+   Compiling 95% HPD node ages from 4001 total trees in tree trace, using a burnin of 1000 trees.
+   Annotating tree ...
+   Compiling MAP tree from 4001 trees in tree trace, using a burnin of 1000 trees.
+   Compiling 95% HPD node ages from 4001 total trees in tree trace, using a burnin of 1000 trees.
+   Annotating tree ...
+
+RevBayes version 1.0.0 beta 4 (2016-02-05)
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("GTR_Gamma.Rev")
+   Processing file "GTR_Gamma.Rev"
+   Successfully read one character matrix from file 'data/primates_cytb.nex'
+   Error:	Argument label 'names' matches no untaken parameter labels.
+   Error:	Problem processing line 73 in file "GTR_Gamma.Rev"
+> 
+RevBayes version 1.0.0 beta 4 (2016-02-05)
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("GTR_GammaEmpty.Rev")
+   Processing file "GTR_GammaEmpty.Rev"
+   Successfully read one character matrix from file 'data/primates_cytb.nex'
+   Error:	Argument label 'names' matches no untaken parameter labels.
+   Error:	Problem processing line 73 in file "GTR_GammaEmpty.Rev"
+> 
+RevBayes version 1.0.0 beta 4 (2016-02-05)
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("GTR_Gamma_Revised.Rev")
+   Processing file "GTR_Gamma_Revised.Rev"
+   Successfully read one character matrix from file 'data/primates_cytb.nex'
+   Error:	Argument label 'names' matches no untaken parameter labels.
+   Error:	Problem processing line 73 in file "GTR_Gamma_Revised.Rev"
+> 
