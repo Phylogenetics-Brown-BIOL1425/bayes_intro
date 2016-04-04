@@ -93,8 +93,11 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
 Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+Yes. The data was already in a fairly constant state by the end of 1000 samples. 
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+For both runs the parameters were very similar. They appeared to be drawn from the same distribution. For the trees, overall they are very similar. THere are some differences that come as a result of a few nodes with low posteriors that jump around. 
 
 ## GTR analysis
 
@@ -106,8 +109,11 @@ Inspect the parameter traces. Note that the gtr run has many more model paramete
 
 Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
 
+Yes. Like the Jukes Cantor run, the data was already in a fairly constant state after 1000 generations. 
+
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+The parameters from both runs converged. The trees were also similar although there were still the few nodes that drifted around and had low vlaues. This was noticeable in that one tree included a polytomy.
 
 ## Running on empty
 
@@ -116,6 +122,8 @@ In the above analyses, the priors were set in the script and the data informed t
     rb GTR_GammaEmpty.Rev
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
+
+The parameter estimates are dramtatically changed between this run and the above runs. Both of these runs converged to similar points but they differed from the outputs with priors. The posteriors of these runs are much higher than the posteriors from the runs with priors. 
 
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
@@ -126,3 +134,4 @@ Copy any one of the three analysis files from above, add it to the git repo, and
 
 How did the change in the prior impact the results (ie, the posterior)?
 
+Changing alpha to 0.10 did not cause a significant change to the results. In particular, the posteriors were very similar. 
