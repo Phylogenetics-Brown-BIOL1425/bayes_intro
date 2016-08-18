@@ -91,9 +91,13 @@ Examine the relationships of the primates under the JC model. Run the `JukesCant
 
     rb JukesCantor.Rev
 
-Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
+Inspect the parameter traces. Was 1000 samples (corresponding to 10000 generations) a sufficient burn in? 
+
+It was not a sufficient burn in, because when the burn-in was made to be 0 in Tracer, the trace was not yet stable and there was still some burn in for both run 1 and run 2.
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
+
+The Marginal Probability Distribution for the two trees were similar in spread but had slightly different peaks, the peak of the tree for run 2 being slightly less negative than that of the tree for run 1. The trees were not the same either—-the same sister relationships were recovered from both runs for the taxa at the tips, but the position of certain clades relative to each other seem to have differed between the trees. For example, the clades of *Lemur catta* and *Lepilemur hubbardorum*, *Alouatta palliata* and *Saimiri sciureus*, *Galago senegalensis* and *Nycticebus coucang*, and *Chlorocebus aethiops* and *Pan paniscus* were determined on both trees with the same taxa and the same relationships. However, the relationship between these four general clades differed between the two trees. The position of the taxon *Tarsius syrichta* also differed. The runs seem to have converged, as the posterior distribution of the two runs were only slightly different with regards to the peak. Though there exists a fine line between runs having converged and not converged, the clear indication of a run not having converged is of two marginal probability distributions that have peaks very separate from each other, with little overlap between the distributions. Though there’s a slight difference between peaks here, the distributions are more or less overlapping and of similar shape, and this indicates that the runs likely converged.
 
 
 ## GTR analysis
@@ -104,10 +108,13 @@ Now run the gtr analyses with:
 
 Inspect the parameter traces. Note that the gtr run has many more model parameters than the jc model above.
 
-Was 1000 samples (corresponding to 10000 generations) a sufficient burn in?
+Was 1000 samples (corresponding to 10000 generations) a sufficient burn in? 
+
+Just as with the Jukes Cantor run, when the burn-in in Tracer is set to 0, the trace for both runs still has a little bit of burn in before stabilizing. 1000 samples was therefore not a sufficient burn in in this case either.
 
 Compare the parameter estimates and trees from the two different runs. Did the runs converge (ie, are the trees and parameters drawn from the same posterior distribution)?
 
+The marginal probability distribution for both trees are very similar to each other in distribution, with the distribution for run 2 very slightly larger in range, and the peak at about the same posterior probability for both runs, although it is noticeably higher for run 2. The trees were more different in topology from each other than the trees for the Jukes Cantor runs were. The sister relationships among the taxa at the tips are the same for both trees except for the relationship between *Callicebus donacophilus*, *Samiri sciureus*, and *Cebus albifrons*, which differs between the two trees in which two taxa are sister to each other. As with the Jukes Cantor trees, the relationships between general clades seem to be the same (except for the relationship mentioned in the previous sentence), but the relationship between the clades differ between the two trees. For example, the clade of *Cheirogaleus major* and *Daubentonia madagascariensis* and the clade of *Chlorocebus aethiops* and *Pan paniscus* are the same in the two trees in the taxa and their relationships, but their position with relation to each other differ between the two trees. Another large difference between the two trees is the difference in placement of the clade of *Loris tardigradus* and *Nycticebus coucang* the clade of *Galago senegalensis* and *Otolemur crassicaudatus*, and the taxon *Perodicticus potto*. The first clade is sister to the second clade and taxon in the tree obtained from run 1, but this is not the case in the tree obtained from run 2. This is another observation indicating the two trees to be more different from each other than the two trees obtained from the JC runs. Given the very similar distribution and shape of the marginal probability distribution for both trees, the runs seem to have converged.
 
 ## Running on empty
 
@@ -117,6 +124,8 @@ In the above analyses, the priors were set in the script and the data informed t
 
 In Tracer, open the `.log` files from this run and the GTR run above. Compare the parameter estimates. How do the data (in the previous analysis) change the posteriors relative to running without data (in this analysis)?
 
+The posteriors are much much much smaller/more negative in the analyses where the data informed the posteriors. In the empty analyses, the posteriors are in the range of 0 to -60, whereas in the previous analyses, the posteriors are much more negative, in the range of -13120 to -13190. 
+
 Because there is a flat prior on the trees, there is a very large number of bipartitions in the posterior. We therefore don't bother creating a `.tree` file.
 
 
@@ -124,5 +133,7 @@ Because there is a flat prior on the trees, there is a very large number of bipa
 
 Copy any one of the three analysis files from above, add it to the git repo, and modify one or more of the priors. For example, in the GRT analyses you could change `alpha_prior <- 0.05`  to `alpha_prior <- 0.10`. Be sure to rename the output files so they don't write over your previous analyses.
 
-How did the change in the prior impact the results (ie, the posterior)?
+How did the change in the prior impact the results (ie, the posterior)? 
+
+The change in the prior did not have a noticeable effect on the posterior. Previously, the posterior range was between -13120 and -13190, whereas now the range is from -13120 to -13200. Comparing all of the posteriors together, with the four marginal probability distribution curves overlaid over each other, the distributions are very similar in their range of posteriors, with no significant aberration into larger or smaller posteriors. A similar conclusion is reached by comparing them in the estimates tab, with the intervals for the four posterior distributions not being appreciably different from each other. This result illustrates the importance of always including the Bayesian analysis conducted in the published paper, and of conducting multiple runs of the analyses and implementing different methods of phylogenetic reconstruction. Doing so would allow one to determine whether the similarity in the posterior distribution and values obtained is likely due to error from the Bayesian analyses, or due to the posterior having a very strong signal that is relatively insensitive to the values taken on by the priors.
 
